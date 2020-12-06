@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText etLastnames;
     EditText etAccountNumber;
     Button dateButton;
+    String birthdate;
+    String major;
 
     String[] majors = {
             "Ingeniería Civil",
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        etName = findViewById(R.id.editTextTextPersonName);
+        etLastnames = findViewById(R.id.editTextTextPersonName2);
+        etAccountNumber = findViewById(R.id.editTextTextPersonName3);
+
         //Majors Spinner
         Spinner majorsSpinners = (Spinner) findViewById(R.id.majorsSpinner);
         ArrayAdapter<String> majorsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, majors);
@@ -61,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
         // Toast.makeText(getApplicationContext(), "Selected User: "+majors[position] ,Toast.LENGTH_SHORT).show();
+        major = majors[position];
     }
 
     @Override
@@ -82,11 +89,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Log.i("Selected Date",  currentDateString);
         dateButton = findViewById(R.id.editTextDate);
         dateButton.setText(currentDateString);
+        birthdate = currentDateString;
     }
 
     public void sendButtonCLick(View view) {
         Intent resultsIntent = new Intent(getBaseContext(), ResultsActivity.class);
-        // resultsIntent.putExtra("EXTRA_SESSION_ID", sessionId);
+
+        String name = etName.getText().toString();
+        String lastnames = etLastnames.getText().toString();
+        String accountNumber = etAccountNumber.getText().toString();
+
+        // resultsIntent.putExtra("TEST_INTENT", "testing intents");
+        resultsIntent.putExtra("NAME", name);
+        resultsIntent.putExtra("LASTNAMES", lastnames);
+        resultsIntent.putExtra("ACCOUNT_NUMBER", accountNumber);
+        resultsIntent.putExtra("BIRTHDATE", birthdate);
+        resultsIntent.putExtra("MAJOR", major);
         startActivity(resultsIntent);
     }
 }
