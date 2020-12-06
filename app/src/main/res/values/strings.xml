@@ -6,4 +6,5 @@
     <string name="birthDate_tv"><b>Fecha de Nacimiento:</b></string>
     <string name="major_tv"><b>Carrera:</b></string>
     <string name="send_btn"><b>Envíar</b></string>
+    <string name="pick_date"><b>Seleccionar fecha</b></string>
 </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidWorkshopApp1</string>
+    <string name="name_tv"><b>Name:</b></string>
+    <string name="lastname_tv"><b>Lastnames:</b></string>
+    <string name="accountNumber_tv"><b>Account Number:</b></string>
+    <string name="birthDate_tv"><b>Birthdate:</b></string>
+    <string name="major_tv"><b>Major:</b></string>
+    <string name="send_btn"><b>Send</b></string>
+    <string name="pick_date"><b>Select date</b></string>
+</resources>

@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
         android:fontFamily="monospace"
+        android:onClick="sendButtonCLick"
         android:text="@string/send_btn"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,8 +53,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="309dp"
-        android:layout_height="37dp"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -129,8 +130,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="305dp"
-        android:layout_height="38dp"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,17 +141,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.303" />
 
-    <EditText
+    <Button
         android:id="@+id/editTextDate"
-        android:layout_width="303dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="date"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:onClick="showDatePickerDialog"
+        android:text="@string/pick_date"
+        app:iconTint="@color/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.582" />
+
+    <Spinner
+        android:id="@+id/majorsSpinner"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.725" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
