@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">AndroidWorkshopApp1</string>
-    <string name="name_tv">Nombre:</string>
-    <string name="lastname_tv">Apellidos:</string>
-    <string name="accountNumber_tv">Número de Cuenta:</string>
-    <string name="birthDate_tv">Fecha de Nacimiento:</string>
-    <string name="send_btn">Envíar</string>
+    <string name="name_tv"><b>Nombre:</b></string>
+    <string name="lastname_tv"><b>Apellidos:</b></string>
+    <string name="accountNumber_tv"><b>Número de Cuenta:</b></string>
+    <string name="birthDate_tv"><b>Fecha de Nacimiento:</b></string>
+    <string name="major_tv"><b>Carrera:</b></string>
+    <string name="send_btn"><b>Envíar</b></string>
 </resources>
