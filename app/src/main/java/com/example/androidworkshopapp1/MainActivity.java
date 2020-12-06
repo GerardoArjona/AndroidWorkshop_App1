@@ -18,7 +18,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener{
 
@@ -29,27 +31,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String birthdate;
     String major;
 
-    String[] majors = {
-            "Ingeniería Civil",
-            "Ingeniería Geomática",
-            "Ingeniería Geofísica",
-            "Ingeniería Geológica",
-            "Ingeniería de Minas y Metalurgia",
-            "Ingeniería Petrolera",
-            "Ingeniería Eléctrica Electrónica",
-            "Ingeniería en Computación",
-            "Ingeniería en Telecomunicaciones",
-            "Ingeniería Industrial",
-            "Ingeniería Mecánica",
-            "Ingeniería Mecatrónica",
-            "Ingeniería en Sistemas Biomédicos"
-    };
+    List<String> majors  = new ArrayList<>();;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        majors.add(getString(R.string.civil));
+        majors.add(getString(R.string.geomatics));
+        majors.add(getString(R.string.geophysics));
+        majors.add(getString(R.string.geology));
+        majors.add(getString(R.string.mines));
+        majors.add(getString(R.string.oil));
+        majors.add(getString(R.string.electric));
+        majors.add(getString(R.string.computer));
+        majors.add(getString(R.string.telecom));
+        majors.add(getString(R.string.industrial));
+        majors.add(getString(R.string.mechanics));
+        majors.add(getString(R.string.mechatronics));
+        majors.add(getString(R.string.biomedics));
 
         etName = findViewById(R.id.editTextTextPersonName);
         etLastnames = findViewById(R.id.editTextTextPersonName2);
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
         // Toast.makeText(getApplicationContext(), "Selected User: "+majors[position] ,Toast.LENGTH_SHORT).show();
-        major = majors[position];
+        major = majors.get(position);
     }
 
     @Override

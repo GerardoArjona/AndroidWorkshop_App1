@@ -7,4 +7,17 @@
     <string name="major_tv"><b>Carrera:</b></string>
     <string name="send_btn"><b>Envíar</b></string>
     <string name="pick_date"><b>Seleccionar fecha</b></string>
+    <string name="civil">Ingeniería Civil</string>
+    <string name="geomatics">Ingeniería Geomática</string>
+    <string name="geophysics">Ingeniería Geofísica</string>
+    <string name="geology">Ingeniería Geológica</string>
+    <string name="mines">Ingeniería de Minas y Metalurgia</string>
+    <string name="oil">Ingeniería Petrolera</string>
+    <string name="electric">Ingeniería Eléctrica Electrónica</string>
+    <string name="computer">Ingeniería en Computación</string>
+    <string name="telecom">Ingeniería en Telecomunicaciones</string>
+    <string name="industrial">Ingeniería Industrial</string>
+    <string name="mechanics">Ingeniería Mecánica</string>
+    <string name="mechatronics">Ingeniería Mecatrónica</string>
+    <string name="biomedics">Ingeniería en Sistemas Biomédicos</string>
 </resources>
