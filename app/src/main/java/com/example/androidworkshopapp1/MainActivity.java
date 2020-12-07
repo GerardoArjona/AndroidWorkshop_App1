@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -101,8 +100,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-    public void sendButtonCLick(View view) {
+    public boolean sendButtonCLick(View view) {
         Intent resultsIntent = new Intent(getBaseContext(), ResultsActivity.class);
+
+        if(etName.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), "Nombre vacío" ,Toast.LENGTH_SHORT).show();
+            etName.setError("Se requiere un nombre");
+            return false;
+        }
+
+        if(etLastnames.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), "Apellidos vacíos" ,Toast.LENGTH_SHORT).show();
+            etLastnames.setError("Se requiere apellidos");
+            return false;
+        }
+
+        Log.i("Regex", String.valueOf(etAccountNumber.getText().toString().matches("[1-9]{9}")));
+        if(etAccountNumber.getText().toString().equals("") || etAccountNumber.getText().toString().matches("[1-9]{9}") == false || etAccountNumber.getText().toString().length() != 9){
+            Toast.makeText(getApplicationContext(), "Número de cuenta vacío o inválido" ,Toast.LENGTH_SHORT).show();
+            etAccountNumber.setError("Se requiere número de cuenta válido");
+            return false;
+        }
+
+        if(birthdate == null || birthdate.equals("")){
+            Toast.makeText(getApplicationContext(), "Fecha inválida" ,Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
 
         String name = etName.getText().toString();
         String lastnames = etLastnames.getText().toString();
@@ -118,5 +142,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         resultsIntent.putExtra("BIRTHDATE_YEAR", birthdate_year);
         resultsIntent.putExtra("MAJOR", major);
         startActivity(resultsIntent);
+        return true;
     }
 }

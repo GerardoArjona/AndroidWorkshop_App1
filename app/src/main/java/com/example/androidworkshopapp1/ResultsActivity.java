@@ -9,13 +9,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Calendar;
-import java.util.Date;
-
-import static java.lang.Integer.parseInt;
 
 public class ResultsActivity extends AppCompatActivity {
 
@@ -54,7 +48,7 @@ public class ResultsActivity extends AppCompatActivity {
             age--;
         }
 
-        Log.i("Age", String.valueOf(age));
+        // Log.i("Age", String.valueOf(age));
 
         Integer ageInt = new Integer(age);
         String ageS = ageInt.toString();
