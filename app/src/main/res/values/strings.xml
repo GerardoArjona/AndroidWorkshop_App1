@@ -20,4 +20,5 @@
     <string name="mechanics">Ingeniería Mecánica</string>
     <string name="mechatronics">Ingeniería Mecatrónica</string>
     <string name="biomedics">Ingeniería en Sistemas Biomédicos</string>
+    <string name="yearsOld">años de edad</string>
 </resources>

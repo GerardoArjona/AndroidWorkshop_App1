@@ -1,11 +1,21 @@
 package com.example.androidworkshopapp1;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
+import java.util.Date;
+
+import static java.lang.Integer.parseInt;
 
 public class ResultsActivity extends AppCompatActivity {
 
@@ -14,9 +24,11 @@ public class ResultsActivity extends AppCompatActivity {
     TextView tvLastnames;
     TextView tvAccountNumber;
     TextView tvBirthdate;
+    TextView tvYearsOld;
     TextView tvMajor;
     ImageView ivMajorPicture;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +41,30 @@ public class ResultsActivity extends AppCompatActivity {
         tvAccountNumber = findViewById(R.id.tvAccountNumberResults);
         tvBirthdate= findViewById(R.id.tvBirthdateResults);
         tvMajor = findViewById(R.id.tvMajorResults);
+        tvYearsOld = findViewById(R.id.tvYearsOld);
+
+        Calendar datOfBirth = Calendar.getInstance();
+        Calendar today = Calendar.getInstance();
+
+        datOfBirth.set(getIntent().getIntExtra("BIRTHDATE_YEAR", 0), getIntent().getIntExtra("BIRTHDATE_MONTH", 0), getIntent().getIntExtra("BIRTHDATE_DAY", 0));
+
+        int age = today.get(Calendar.YEAR) - datOfBirth.get(Calendar.YEAR);
+
+        if (today.get(Calendar.DAY_OF_YEAR) < datOfBirth.get(Calendar.DAY_OF_YEAR)){
+            age--;
+        }
+
+        Log.i("Age", String.valueOf(age));
+
+        Integer ageInt = new Integer(age);
+        String ageS = ageInt.toString();
 
         tvName.setText(getIntent().getStringExtra("NAME"));
         tvLastnames.setText(getIntent().getStringExtra("LASTNAMES"));
         tvAccountNumber.setText(getIntent().getStringExtra("ACCOUNT_NUMBER"));
         tvBirthdate.setText(getIntent().getStringExtra("BIRTHDATE"));
         tvMajor.setText(getIntent().getStringExtra("MAJOR"));
+        tvYearsOld.setText(ageS + " " + getString(R.string.yearsOld));
 
         ivMajorPicture = (ImageView)findViewById((R.id.ivMajorPictureResults));
         if(getString(R.string.civil).equals(getIntent().getStringExtra("MAJOR")))

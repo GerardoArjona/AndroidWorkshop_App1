@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Button dateButton;
     String birthdate;
     String major;
+    int birthdate_month;
+    int birthdate_year;
+    int birthdate_day;
 
     List<String> majors  = new ArrayList<>();;
 
@@ -92,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         dateButton = findViewById(R.id.editTextDate);
         dateButton.setText(currentDateString);
         birthdate = currentDateString;
+        birthdate_month = month;
+        birthdate_year = year;
+        birthdate_day = day;
+
     }
 
     public void sendButtonCLick(View view) {
@@ -106,6 +113,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         resultsIntent.putExtra("LASTNAMES", lastnames);
         resultsIntent.putExtra("ACCOUNT_NUMBER", accountNumber);
         resultsIntent.putExtra("BIRTHDATE", birthdate);
+        resultsIntent.putExtra("BIRTHDATE_DAY", birthdate_day);
+        resultsIntent.putExtra("BIRTHDATE_MONTH", birthdate_month);
+        resultsIntent.putExtra("BIRTHDATE_YEAR", birthdate_year);
         resultsIntent.putExtra("MAJOR", major);
         startActivity(resultsIntent);
     }
