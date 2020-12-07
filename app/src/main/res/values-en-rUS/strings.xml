@@ -11,14 +11,14 @@
     <string name="civil">Civil Engineering</string>
     <string name="geomatics">Geomatic Engineering</string>
     <string name="geophysics">Geophysics Engineering</string>
-    <string name="geology">Geology Engineering</string>
+    <string name="geology">Geological Engineering</string>
     <string name="mines">" Mines Engineering"</string>
     <string name="oil">" Oil Engineering"</string>
     <string name="electric">" Electric Engineering"</string>
     <string name="computer">Computer Engineering</string>
     <string name="telecom">Telecommunications Engineering</string>
     <string name="industrial">Industrial Engineering</string>
-    <string name="mechanics">Mechanics Engineering</string>
+    <string name="mechanics">Mechanical Engineering</string>
     <string name="mechatronics">Mechatronics Engineering</string>
     <string name="biomedics">Biomedic Systems Engineering</string>
 </resources>

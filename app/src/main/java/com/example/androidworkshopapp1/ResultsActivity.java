@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ResultsActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class ResultsActivity extends AppCompatActivity {
     TextView tvAccountNumber;
     TextView tvBirthdate;
     TextView tvMajor;
+    ImageView ivMajorPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +35,35 @@ public class ResultsActivity extends AppCompatActivity {
         tvAccountNumber.setText(getIntent().getStringExtra("ACCOUNT_NUMBER"));
         tvBirthdate.setText(getIntent().getStringExtra("BIRTHDATE"));
         tvMajor.setText(getIntent().getStringExtra("MAJOR"));
+
+        ivMajorPicture = (ImageView)findViewById((R.id.ivMajorPictureResults));
+        if(getString(R.string.civil).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.civil);
+        else if (getString(R.string.geomatics).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.geomatic);
+        else if (getString(R.string.geophysics).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.geophysics);
+        else if (getString(R.string.geology).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.geology);
+        else if (getString(R.string.mines).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.mines);
+        else if (getString(R.string.oil).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.oil);
+        else if (getString(R.string.electric).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.electric);
+        else if (getString(R.string.computer).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.computer);
+        else if (getString(R.string.telecom).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.telecom);
+        else if (getString(R.string.industrial).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.industrial);
+        else if (getString(R.string.mechanics).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.mehcanics);
+        else if (getString(R.string.mechatronics).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.mechatronics);
+        else if (getString(R.string.biomedics).equals(getIntent().getStringExtra("MAJOR")))
+            ivMajorPicture.setImageResource(R.drawable.biomedic);
+        else
+            ivMajorPicture.setImageResource(R.drawable.def);
     }
 }
