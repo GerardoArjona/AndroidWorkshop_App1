@@ -29,4 +29,5 @@
     <string name="nameErrorHelp">Name is required</string>
     <string name="lastnameErrorHelp">Last name is required</string>
     <string name="accountNumberErrorHelp">Valid account number is required</string>
+    <string name="iv_pictureIamgeDescription">Engineering Picture</string>
 </resources>
