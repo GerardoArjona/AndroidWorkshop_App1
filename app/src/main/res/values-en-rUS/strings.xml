@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">AndroidWorkshopApp1</string>
     <string name="name_tv"><b>Name:</b></string>
-    <string name="lastname_tv"><b>Lastnames:</b></string>
+    <string name="lastname_tv"><b>Last Name:</b></string>
     <string name="accountNumber_tv"><b>Account Number:</b></string>
     <string name="birthDate_tv"><b>Birthdate:</b></string>
     <string name="major_tv"><b>Major:</b></string>
@@ -12,9 +12,9 @@
     <string name="geomatics">Geomatic Engineering</string>
     <string name="geophysics">Geophysics Engineering</string>
     <string name="geology">Geological Engineering</string>
-    <string name="mines">" Mines Engineering"</string>
-    <string name="oil">" Oil Engineering"</string>
-    <string name="electric">" Electric Engineering"</string>
+    <string name="mines">Mines Engineering</string>
+    <string name="oil">Oil Engineering</string>
+    <string name="electric">Electric Engineering</string>
     <string name="computer">Computer Engineering</string>
     <string name="telecom">Telecommunications Engineering</string>
     <string name="industrial">Industrial Engineering</string>
@@ -22,4 +22,11 @@
     <string name="mechatronics">Mechatronics Engineering</string>
     <string name="biomedics">Biomedic Systems Engineering</string>
     <string name="yearsOld">years old</string>
+    <string name="nameError">Empty name</string>
+    <string name="lastnameError">Empty lastname</string>
+    <string name="accountNumberError">Empty or invalid account number</string>
+    <string name="dateError">Invalid date</string>
+    <string name="nameErrorHelp">Name is required</string>
+    <string name="lastnameErrorHelp">Last name is required</string>
+    <string name="accountNumberErrorHelp">Valid account number is required</string>
 </resources>

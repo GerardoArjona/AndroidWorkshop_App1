@@ -21,4 +21,11 @@
     <string name="mechatronics">Ingeniería Mecatrónica</string>
     <string name="biomedics">Ingeniería en Sistemas Biomédicos</string>
     <string name="yearsOld">años de edad</string>
+    <string name="nameError">Nombre vacío</string>
+    <string name="lastnameError">Apellidos vacíos</string>
+    <string name="accountNumberError">Número de cuenta vacío o inválido</string>
+    <string name="dateError">Fecha inválida</string>
+    <string name="nameErrorHelp">Se requiere un nombre</string>
+    <string name="lastnameErrorHelp">Se requiere apellidos</string>
+    <string name="accountNumberErrorHelp">Se requiere número de cuenta válido</string>
 </resources>

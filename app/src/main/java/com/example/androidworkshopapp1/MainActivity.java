@@ -104,26 +104,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Intent resultsIntent = new Intent(getBaseContext(), ResultsActivity.class);
 
         if(etName.getText().toString().equals("")){
-            Toast.makeText(getApplicationContext(), "Nombre vacío" ,Toast.LENGTH_SHORT).show();
-            etName.setError("Se requiere un nombre");
+            Toast.makeText(getApplicationContext(), getString(R.string.nameError) ,Toast.LENGTH_SHORT).show();
+            etName.setError(getString(R.string.nameErrorHelp));
             return false;
         }
 
         if(etLastnames.getText().toString().equals("")){
-            Toast.makeText(getApplicationContext(), "Apellidos vacíos" ,Toast.LENGTH_SHORT).show();
-            etLastnames.setError("Se requiere apellidos");
+            Toast.makeText(getApplicationContext(), getString(R.string.lastnameError) ,Toast.LENGTH_SHORT).show();
+            etLastnames.setError(getString(R.string.lastnameErrorHelp));
             return false;
         }
 
         Log.i("Regex", String.valueOf(etAccountNumber.getText().toString().matches("[1-9]{9}")));
         if(etAccountNumber.getText().toString().equals("") || etAccountNumber.getText().toString().matches("[1-9]{9}") == false || etAccountNumber.getText().toString().length() != 9){
-            Toast.makeText(getApplicationContext(), "Número de cuenta vacío o inválido" ,Toast.LENGTH_SHORT).show();
-            etAccountNumber.setError("Se requiere número de cuenta válido");
+            Toast.makeText(getApplicationContext(), getString(R.string.accountNumberError) ,Toast.LENGTH_SHORT).show();
+            etAccountNumber.setError(getString(R.string.accountNumberErrorHelp));
             return false;
         }
 
         if(birthdate == null || birthdate.equals("")){
-            Toast.makeText(getApplicationContext(), "Fecha inválida" ,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.dateError) ,Toast.LENGTH_SHORT).show();
             return false;
         }
 
